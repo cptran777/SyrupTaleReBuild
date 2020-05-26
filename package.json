@@ -1,0 +1,38 @@
+{
+  "name": "syrup-tale-re-build",
+  "version": "0.0.1",
+  "description": "Syrup Tale Re:Build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cptran777/SyrupTaleReBuild.git"
+  },
+  "keywords": [
+    "syrup",
+    "tale",
+    "2d",
+    "rpg",
+    "platformer",
+    "multiplayer"
+  ],
+  "author": "Charlie tran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cptran777/SyrupTaleReBuild/issues"
+  },
+  "homepage": "https://github.com/cptran777/SyrupTaleReBuild#readme",
+  "dependencies": {
+    "@types/socket.io": "^2.1.8",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "socket.io": "^2.3.0",
+    "typescript": "^3.9.3",
+    "uuid": "^8.1.0"
+  }
+}

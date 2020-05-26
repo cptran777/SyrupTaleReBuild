@@ -1,0 +1,47 @@
+  
+{
+  "compilerOptions": {
+    "target": "es6",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "lib": [
+      "es2017.object",
+      "es2016",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "listEmittedFiles": false,
+    "experimentalDecorators": true,
+    "downlevelIteration": true
+  },
+  "files": [
+    "node_modules/typescript/lib/lib.es6.d.ts",
+  ],
+  "include": [
+    "server"
+  ],
+  "exclude": [
+    "tmp",
+    "dist",
+    "vendor",
+    "node_modules",
+    ".git",
+    ".gradle",
+    ".idea",
+    "logs"
+  ]
+}

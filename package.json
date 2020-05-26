@@ -2,9 +2,14 @@
   "name": "syrup-tale-re-build",
   "version": "0.0.1",
   "description": "Syrup Tale Re:Build",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node ./dist/index.js",
+    "build": "tsc && cd client && yarn build",
+    "start-dev": "tsc && cd client && yarn build && cd ../ && node ./dist/index.js",
+    "start-dev-server": "tsc && node ./dist/index.js",
+    "postinstall": "cd client && yarn install"
   },
   "repository": {
     "type": "git",
@@ -25,6 +30,7 @@
   },
   "homepage": "https://github.com/cptran777/SyrupTaleReBuild#readme",
   "dependencies": {
+    "@types/express": "^4.17.6",
     "@types/socket.io": "^2.1.8",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",

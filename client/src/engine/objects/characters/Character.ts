@@ -5,8 +5,4 @@ export class Character extends GameObject {
   defense = 0;
   hp = 0;
   maxHp = 0;
-
-  constructor(objectAsset: Object) {
-    super(objectAsset);
-  }
 }

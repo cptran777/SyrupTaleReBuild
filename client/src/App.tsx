@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.scss';
-import { TestCanvas } from './components/TestCanvas';
+import { GameWindow } from './components/GameWindow';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TestCanvas />
+        Syrup Tale
       </header>
+      <section className="App-body">
+        <GameWindow />
+      </section>
     </div>
   );
 }

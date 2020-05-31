@@ -5,7 +5,7 @@ import bodyparser from 'body-parser';
 import socketIO from 'socket.io';
 import http from 'http';
 import { router } from './routes/router';
-import { initSocketHandler } from './sockets/main';
+import { GameSockets } from './sockets/main';
 
 require('dotenv').config();
 
@@ -28,7 +28,9 @@ const server = http.createServer(app);
 const io = socketIO(server);
 const port = process.env.PORT || 3001;
 
-initSocketHandler(io);
+const gameSockets = new GameSockets().init(io);
+
+gameSockets && console.log('Sockets setup successfully');
 
 server.listen(port, () => {
   console.log('Listening on port', port);

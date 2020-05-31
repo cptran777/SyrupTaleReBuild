@@ -1,6 +1,6 @@
-import { Sprite, SpriteSheet } from "../../vendor/createjs";
+import { Sprite, SpriteSheet } from '../../vendor/createjs';
 import { v4 as uuid } from 'uuid';
-import { ISpriteParameters } from "../../types/vendor/createjs-easel";
+import { ISpriteParameters } from '../../types/vendor/createjs-easel';
 
 export interface IGameObjectCreateOptions {
   defaultAnimation?: string;
@@ -30,6 +30,15 @@ export class GameObject {
   getPosition(): { x: number, y: number } {
     const { x, y } = this._position;
     return { x, y };
+  }
+
+  /**
+   * Sets the position of the object relative to the virtual "map world"
+   * @param position - new position to set
+   */
+  setPosition(position: { x: number, y: number }): void {
+    this._position.x = position.x;
+    this._position.y = position.y;
   }
 
   create(spriteParameters: ISpriteParameters, options: IGameObjectCreateOptions): GameObject {

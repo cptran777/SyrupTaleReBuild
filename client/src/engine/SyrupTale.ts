@@ -1,4 +1,5 @@
 import { Stage, LoadQueue, Shape } from "../vendor/createjs";
+import { ForestDungeon } from './maps/ForestDungeon';
 
 export class SyrupTale {
   private static manifest = [
@@ -7,6 +8,7 @@ export class SyrupTale {
 
   stage: Stage;
   loader: LoadQueue;
+  map!: ForestDungeon;
 
   constructor(gameWindowId: string) {
     this.stage = new Stage(gameWindowId);
@@ -15,18 +17,13 @@ export class SyrupTale {
 
   init(): SyrupTale {
     this.loader.addEventListener('complete', () => {
-      // Canvas width and height stored in var w and h for future use. 
-      const canvasWidth = (this.stage.canvas as HTMLCanvasElement).width;
-      const canvasHeight = (this.stage.canvas as HTMLCanvasElement).height;
-
-      // Creates background image. 
-      const background = new Shape();
-      const backgroundImg = this.loader.getResult('background') as HTMLImageElement;
-      background.graphics.beginBitmapFill(backgroundImg).drawRect(0, 0, canvasWidth + backgroundImg.width, canvasHeight + backgroundImg.height);
-      this.stage.addChild(background);
-
-      // Adjustment to line the image mentioned above. 
-      background.y = -105;
+      const map = new ForestDungeon(
+        this.loader.getResult('background') as HTMLImageElement, 
+        this.stage.canvas as HTMLCanvasElement
+      );
+      
+      this.map = map;
+      this.stage.addChild(map.background);
       this.stage.update();
     });
 

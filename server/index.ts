@@ -17,7 +17,7 @@ const app = express();
 // /******************************* INIT MIDDLEWARE *******************************/
 
 // // Should allow us to use the assets inside the public folder in the client side codes
-app.use(express.static(__dirname + '/client/build/'));
+app.use(express.static(__dirname + '/../client/build/'));
 app.use(bodyparser.json());
 
 router(app);

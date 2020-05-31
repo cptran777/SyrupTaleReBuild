@@ -1,4 +1,5 @@
 import { v4 as uuid} from 'uuid';
+import { GameMap } from '../../game/map';
 
 /**
  * Represents a single room or lobby that clients can join into

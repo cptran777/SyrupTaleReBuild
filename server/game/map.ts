@@ -1,3 +1,3 @@
-class GameMap {
+export class GameMap {
   
 }

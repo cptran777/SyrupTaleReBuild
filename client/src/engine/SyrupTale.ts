@@ -1,4 +1,4 @@
-import { Stage, LoadQueue, Shape } from "../vendor/createjs";
+import { Stage, LoadQueue } from "../vendor/createjs";
 import { ForestDungeon } from './maps/ForestDungeon';
 
 export class SyrupTale {

@@ -1,27 +1,32 @@
 import { v4 as uuid} from 'uuid';
-import { GameMap } from '../../game/map';
+import { SyrupTale } from '../../../engine/SyrupTale';
 
 /**
- * Represents a single room or lobby that clients can join into
+ * Represents a single room or lobby that clients can join into. In a proper multiplayer setup, this
+ * would probably be handled on a separate machine.
  */
 export class GameRoom {
   static sizeLimit = 2;
   private _id = '0';
-  private _map: GameMap;
   private _connections: Array<string>;
+  private _game: SyrupTale;
 
   constructor() {
     this._id = uuid();
-    this._map = new GameMap();
     this._connections = [];
+    this._game = new SyrupTale();
+  }
+
+  init(): void {
+    
   }
 
   getId(): string {
     return this._id;
   }
 
-  getMap(): GameMap {
-    return this._map;
+  getGame(): SyrupTale {
+    return this._game;
   }
 
   hasConnection(id: string): boolean {

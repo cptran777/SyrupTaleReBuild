@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { GameWindow } from './components/GameWindow';
+import { PhaserTesting } from './components/TestPhaser';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         Syrup Tale
       </header>
       <section className="App-body">
-        <GameWindow />
+        <PhaserTesting />
       </section>
     </div>
   );
